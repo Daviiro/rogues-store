@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
 export default function Header() {
 	return (
 		<header className="w-full h-28 p-2 bg-white flex flex-col">
@@ -44,8 +47,14 @@ export default function Header() {
 					</div>
 				</form>
 			</div>
-			<div className="w-7/12 h-auto flex justify-between m-1">
+			<div className="w-full h-auto flex justify-between m-1">
 				<div className="w-36 h-6 bg-yellow-400 ">Categorias</div>
+
+				<div className="text-black cursor-pointer">
+					<Link href="/cart">
+						<AiOutlineShoppingCart size={25} />
+					</Link>
+				</div>
 			</div>
 		</header>
 	);
